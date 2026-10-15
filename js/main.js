@@ -523,7 +523,7 @@
           const seg = wave(x, y0, y1, amp, 120);
           pts = pts.concat(seg);
         });
-        end = { x: W / 2, y: bodies[2].y + bodies[2].h + 84 };
+        end = { x: W / 2, y: bodies[bodies.length - 1].y + bodies[bodies.length - 1].h + 84 };
         pts.push(end);
         parts.push({ d: curveThrough(pts), gap: 0 });
       } else {
